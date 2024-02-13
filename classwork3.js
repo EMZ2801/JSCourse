@@ -15,6 +15,9 @@ function getTimeOfDay (nowHours) {
      }
      else if (nowHours >=17  && nowHours <20) {
         return 'сейчас вечер'
+     } 
+     else {
+        return 'неверный формат времени'
      }
 }
 console.log (getTimeOfDay(8))
@@ -51,6 +54,7 @@ while (i < 20) {
  Вывод: "(123) 456-7890"*/
 
 
+ let phoneNumber = '0'
  function formatPhoneNumber(phoneNumber) {
     return phoneNumber = '(' + phoneNumber.slice (0, 3) + ')'+ ' ' + phoneNumber.substring (3,6) + '-'+ phoneNumber.substring (6, 4)
     
