@@ -54,9 +54,11 @@ while (i < 20) {
  Вывод: "(123) 456-7890"*/
 
 
- let phoneNumber = '0'
- function formatPhoneNumber(phoneNumber) {
-    return phoneNumber = '(' + phoneNumber.slice (0, 3) + ')'+ ' ' + phoneNumber.substring (3,6) + '-'+ phoneNumber.substring (6, 4)
-    
+function formatPhoneNumber(phoneNumber) {
+   if ((phoneNumber.length === 10) && parseInt(phoneNumber))  {
+   return ( '(' + phoneNumber.slice (0, 3) + ')'+ ' ' + phoneNumber.substring (3,6) + '-'+ phoneNumber.substring (6,phoneNumber.length))
+   } else {
+      return 'неверный формат вводимых данных'
+   }
 }
 console.log (formatPhoneNumber('1234567890'))
