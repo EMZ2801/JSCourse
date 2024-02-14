@@ -56,7 +56,7 @@ while (i < 20) {
 
 function formatPhoneNumber(phoneNumber) {
    if ((phoneNumber.length === 10) && parseInt(phoneNumber))  {
-   return ( '(' + phoneNumber.slice (0, 3) + ')'+ ' ' + phoneNumber.substring (3,6) + '-'+ phoneNumber.substring (6,phoneNumber.length))
+   return ( '(' + phoneNumber.slice (0, 3) + ')'+ ' ' + phoneNumber.substring (3,6) + '-'+ phoneNumber.slice (6))
    } else {
       return 'неверный формат вводимых данных'
    }
