@@ -19,24 +19,22 @@
 
 
  
-    let mas = []
-    let mas2 = []
-   
-    function multiplyTable(n) {
+   let mas = []
+   function multiplyTable(n) {
       if (Number.isInteger(n) && (n>0)) {
       for (let a = 1; a <= n; a++) {
          for (let b = 1; b <= n; b++) {
              mas.push (a*b)
          }
-         mas2 = mas.join (' ');
-         console.log (mas2);
+         mas = mas.join (' ');
+         console.log (mas);
          mas = [];
       }
    } else {
       console.log ('введите целое положительное число')
       }
     } 
-    (multiplyTable(5))
+   (multiplyTable(5))
 
 // 2
 /*
