@@ -6,12 +6,7 @@
 
 function isPalinmrom(str) {
     str = str.toLowerCase().
-    replaceAll(',', '').
-    replaceAll('!', '').
-    replaceAll('?', '').
-    replaceAll('.', '').
-    replaceAll('-', '').
-    replaceAll(/\s/g,'');
+    replaceAll (/[.,!?"';:()-\s]/g, '');
     return str ===str.split('').reverse().join('');
  }
  
