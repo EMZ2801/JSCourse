@@ -3,11 +3,11 @@
 /* f("tenet") // true */
 /* f("tenet!") // true */
 
-function chekIsPalinmrom(str) {
+function chekIsPalindrom(str) {
   str = str.toLowerCase().replaceAll(/[.,!?"';:()-\s]/g, "");
   return str === str.split("").reverse().join("");
 }
-console.log(chekIsPalinmrom("заказ ! шалаш. заказ"));
+console.log(chekIsPalindrom("заказ ! шалаш. заказ"));
 
 //2. Напишите функцию, принимающую строку и возвращающую самое длинное слово в строке
 // f('Web Development Tutorial'); // "Development"
