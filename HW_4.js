@@ -13,21 +13,21 @@ console.log(chekIsPalinmrom("Закaз  ! шалаш? заказ."));
 //2. Напишите функцию, принимающую строку и возвращающую самое длинное слово в строке
 // f('Web Development Tutorial'); // "Development"
 
-let extraStr = "";
-let lengthOflongestWord = 0;
-let indexOfLongestWord = 0;
 function getlongesttWords(str) {
-  extraStr = str.split(" ");
-  for (let i = 0; i < extraStr.length; i++) {
-    if (extraStr[i].length > lengthOflongestWord) {
-      lengthOflongestWord = extraStr[i].length;
-      indexOfLongestWord = i;
-    }
-  }
-}
-
-getlongesttWords("Web Development Tutorial");
-console.log(extraStr[indexOfLongestWord]);
+   let extraStr = "";
+   let lengthOflongestWord = 0;
+   let indexOfLongestWord = 0;
+   extraStr = str.split(" ");
+   for (let i = 0; i < extraStr.length; i++) {
+     if (extraStr[i].length > lengthOflongestWord) {
+       lengthOflongestWord = extraStr[i].length;
+       indexOfLongestWord = i;
+     }
+   }
+   return extraStr[indexOfLongestWord];
+ }
+ 
+ console.log(getlongesttWords("Web Development Tutorial"));
 
 //3. Напишите функцию, принимающую аргумент в виде строки и которая расставляет все буквы строки в алфавитном порядке. Возвращает новую строку с буквами в алфавитном порядке
 /* f("alphabetical");  */ // "aaabcehillpt"
