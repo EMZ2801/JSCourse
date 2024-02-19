@@ -44,21 +44,21 @@ console.log(getAverageSum(argument))
     }
  */
 
-    function customAssign(target, source) {
-      target = Object.assign(target, source);
-      return target;
-    }
-    const target = {
-      name: "Kate",
-      age: 30,
-    };
-    
-    const source = {
-      firstname: "Ivanov",
-      name: "Polina",
-      id: "248",
-    };
-    console.log(customAssign(target, source))
+function customAssign(target, source) {
+  target = Object.assign(target, source);
+  return target;
+}
+const isTarget = {
+  name: "Kate",
+  age: 30,
+};
+
+const isSource = {
+  firstname: "Ivanov",
+  name: "Polina",
+  id: "248",
+};
+console.log(customAssign(isTarget, isSource))
 
 
 /*3
