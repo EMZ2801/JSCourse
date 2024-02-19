@@ -7,38 +7,37 @@ function chekIsPalinmrom(str) {
   str = str.toLowerCase().replaceAll(/[.,!?"';:()-\s]/g, "");
   return str === str.split("").reverse().join("");
 }
-
-console.log(chekIsPalinmrom("Закaз  ! шалаш? заказ."));
+console.log(chekIsPalinmrom("заказ ! шалаш. заказ"));
 
 //2. Напишите функцию, принимающую строку и возвращающую самое длинное слово в строке
 // f('Web Development Tutorial'); // "Development"
 
 function getlongesttWords(str) {
-   let extraStr = "";
-   let lengthOflongestWord = 0;
-   let indexOfLongestWord = 0;
-   extraStr = str.split(" ");
-   for (let i = 0; i < extraStr.length; i++) {
-     if (extraStr[i].length > lengthOflongestWord) {
-       lengthOflongestWord = extraStr[i].length;
-       indexOfLongestWord = i;
-     }
-   }
-   return extraStr[indexOfLongestWord];
- }
- 
- console.log(getlongesttWords("Web Development Tutorial"));
+  let extraStr = "";
+  let lengthOflongestWord = 0;
+  let indexOfLongestWord = 0;
+  extraStr = str.split(" ");
+  for (let i = 0; i < extraStr.length; i++) {
+    if (extraStr[i].length > lengthOflongestWord) {
+      lengthOflongestWord = extraStr[i].length;
+      indexOfLongestWord = i;
+    }
+  }
+  return extraStr[indexOfLongestWord];
+}
+
+console.log(getlongesttWords("Web Development Tutorial"));
 
 //3. Напишите функцию, принимающую аргумент в виде строки и которая расставляет все буквы строки в алфавитном порядке. Возвращает новую строку с буквами в алфавитном порядке
 /* f("alphabetical");  */ // "aaabcehillpt"
 
-let newalphabetStr;
 function getAlphabetView(str) {
+  let newalphabetStr;
   str = str.toLowerCase().trim().split("").sort();
   newalphabetStr = str.join("");
+  return newalphabetStr;
 }
-getAlphabetView("aLphabetical");
-console.log(newalphabetStr);
+console.log(getAlphabetView("aLphabetical"));
 
 /* 4. Напишите функцию JavaScript, которая принимает строку и возвращает индекс первого неповторяющегося символа. 
 f('фывфавыапрс'); // 8 */
