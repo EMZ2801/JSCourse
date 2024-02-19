@@ -33,7 +33,7 @@ const argument = (person = {
   houseNum: 52,
 });
 
-console.log(getAverageSum(argument));
+console.log(getAverageSum(argument))
 
 /*2
 Напишите кастомный Object.assign,
