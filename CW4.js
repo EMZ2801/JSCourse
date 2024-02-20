@@ -44,21 +44,34 @@ console.log(getAverageSum(person));
     }
  */
 
-function customAssign(target, source) {
-  target = Object.assign(target, source);
+function customObjectAssign(target, ...sources) {
+  for (const source of sources) {
+    for (const key in source) {
+      if (source.hasOwnProperty(key)) {
+        const value = source[key];
+        if (value && typeof value === "object") {
+          target[key] = customObjectAssign({}, value);
+        } else {
+          target[key] = value;
+        }
+      }
+    }
+  }
+
   return target;
 }
-const isTarget = {
-  name: "Kate",
+const target = {
+  name: "Ann",
   age: 30,
+  firstname: "Petrov",
 };
 
-const isSource = {
+const source = {
   firstname: "Ivanov",
   name: "Polina",
   id: "248",
 };
-console.log(customAssign(isTarget, isSource))
+console.log(customObjectAssign(target, source));
 
 
 /*3
