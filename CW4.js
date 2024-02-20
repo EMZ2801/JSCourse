@@ -10,30 +10,30 @@ const person = {
 Создайте функцию, которая выводит среднее арифметическое всех числовых значений объекта и выводит результат в консоль
  */
 
-function getAverageSum(argument) {
-  let isSum = 0;
-  let i = 0;
-  for (let key in person) {
-    if (parseFloat(person[key])) {
-      isSum += parseFloat(person[key]);
-      i++;
+function getAverageSum(myObject) {
+  let summa = 0;
+  let quantity = 0;
+  for (let key in myObject) {
+    if (parseFloat(myObject[key])) {
+      summa += parseFloat(myObject[key]);
+      quantity++;
     }
   }
-  if (i > 0) {
-    return +(isSum / i).toFixed(2);
+  if (quantity > 0) {
+    return +(summa / quantity).toFixed(2);
   } else {
     return "числовые значения объекта отсутствуют";
   }
 }
-const argument = (person = {
+const person = {
   name: "Pete",
   age: 24,
   salary: 2550,
   street: "Some street",
   houseNum: 52,
-});
+};
 
-console.log(getAverageSum(argument))
+console.log(getAverageSum(person));
 
 /*2
 Напишите кастомный Object.assign,
@@ -82,20 +82,26 @@ const formattedDate = formatDate(currentDate);
 */
 
 function getNewformatDate(date) {
-  const isNewFormatDate = `${
-    date.getDate() + 1 < 10 ? "0" : ""
-  }${date.getDate()}.${date.getMonth() + 1 < 10 ? "0" : ""}${
-    date.getMonth() + 1
-  }.${date.getFullYear()}, ${
-    date.getHours() + 1 < 10 ? "0" : ""
-  }${date.getHours()}:${
-    date.getMinutes() + 1 < 10 ? "0" : ""
-  }${date.getMinutes()}:${
-    date.getSeconds() + 1 < 10 ? "0" : ""
-  }${date.getSeconds()}`;
-  console.log(isNewFormatDate); // Выведет строку в формате "DD.MM.YYYY, HH:mm:ss"
-  return isNewFormatDate;
+  const dateInfo = {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    day: date.getDate(),
+    hours: date.getHours(),
+    minutes: date.getMinutes(),
+    seconds: date.getSeconds(),
+  };
+
+  for (let key in dateInfo) {
+    dateInfo[key] = addFirstZero(dateInfo[key]);
+  }
+
+  const newFormatDate = `${dateInfo.day}.${dateInfo.month}.${dateInfo.year}, ${dateInfo.hours}:${dateInfo.minutes}:${dateInfo.seconds}`;
+
+  return newFormatDate;
+}
+function addFirstZero(number) {
+  return number < 10 ? "0" + number : number;
 }
 
 const date = new Date();
-getNewformatDate(date)
+console.log(getNewformatDate(date));
