@@ -16,7 +16,7 @@ interface Address {
 
 type VillageAddress = Address & {village: string} // <----  создайте тип, состоящий из интерфейса Address и дополнительного поля village: string
 type PrivateHouseAddress = Omit<Address, 'apartments'> & {houseNum: number}// <----  создайте тип, состоящий из интерфейса Address, в котором нет свойства apartments, но есть свойство houseNum: number
-type UserName = Omit<UserData, 'name'> // <--------- создайте тип, состоящий из интерфейса UserData, со всеми исключенными полями, кроме name
+type UserName = Omit<UserData, 'age'| 'adress'> // <--------- создайте тип, состоящий из интерфейса UserData, со всеми исключенными полями, кроме name
 
 //ВНИМАНИЕ: утилиты типов не должны повторяться
 
