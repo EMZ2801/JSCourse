@@ -55,7 +55,7 @@ h3 {
 .education_web {
     display: flex;
 }
-.education_web__name {
+.education_web__name {   
     font-weight: bold;
 }
 
