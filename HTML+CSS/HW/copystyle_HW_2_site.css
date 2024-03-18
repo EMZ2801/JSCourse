@@ -242,6 +242,90 @@ a {
     display: none;
 }
 
+.box {
+    width: 1440px;
+    background: white;
+    padding-left:20px;
+}
+
+.box_season_h2 {
+    font-family: Inter-bold, sans-serif;
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-size: 40px;
+    color: black;
+    margin:0px;
+}
+
+.spring {
+    display: flex;
+}
+
+.season {
+    width: 1440px;
+
+}
+
+.season_large {
+    display: flex;
+    width: 1440px;
+    height: 1150px;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.season_small {
+    width: 590px;
+    height: 555px;
+    border: 1px solid black;
+}
+
+.name_author {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+hr {
+    border: none;
+    text-align: left;
+    border-top: 1px solid #999999;
+    width: 20px;
+    margin-left: 0px;
+    margin-bottom:20px;
+    margin-left: 20px;
+}
+
+.description {
+    font-family: Inter-bold, sans-serif;
+    letter-spacing: 1px;
+    line-height: 40px;
+    font-size: 20px;
+    color: black;
+    padding-left:20px;
+    font-weight: 600;
+}
+
+.text_seasons {
+    margin-top: 50px;
+    width: 355px;
+    height: 160px;
+    margin-left: 20px;
+}
+
+.text_book {
+    font-family: Inter-regular, sans-serif;
+    letter-spacing: 2px;
+    line-height: 40px;
+    font-size: 15px;
+    float:left;
+}
+
+.photo_seasons {
+    margin-top:-102px;
+
+}
+
 .footer_container {
     background-color: black;
     width: 1440px;
@@ -261,8 +345,6 @@ a {
     line-height: 20px;
     letter-spacing: 0%;
     height: 60%;
-   
-
 }
 
 
