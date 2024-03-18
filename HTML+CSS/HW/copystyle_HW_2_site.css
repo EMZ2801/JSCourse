@@ -230,12 +230,16 @@ a {
 }
 
 .slider_bottoms_sq.pk1440:hover {
-    background-color:aqua;
+    background-color:rgb(237, 243, 243);
     cursor: pointer;
 }
 
 .slider_bottoms_round.pk1440.first {
     background-color: #BB945F;
+}
+
+.tel768 {
+    display: none;
 }
 
 .footer_container {
@@ -338,8 +342,11 @@ p {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
 
+.container_header {
+    width: 768px;
+}
     h1 {
         font-family: Forum-Regular;
         line-height: 50px;  
@@ -411,13 +418,111 @@ p {
         background-color: white;
     }
 
+
+    .wellcome {
+        background-image: url(image/Welcome.png) ;
+        background-size: cover;
+        position: relative;
+        background-position: center;
+        width: 768px;
+    }
+    
+    .wellcome_table {
+        position: absolute;
+        top: 37%;
+    }
+    
+    .wellcome_table_text {
+        width: 520px;
+        height: 150px;
+        border: 1px none black;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    
+    
+    .wellcome_h2 {
+        font-family: Forum-Regular;
+        color: white;
+        line-height: 50px;  
+        letter-spacing: 3px;
+        font-weight: 400;
+        font-size: 40px;
+        text-transform: uppercase; 
+    }
+
+    .about {
+        width: 768px;
+    }
+    
 .about_info_library {
     display: block;
-    justify-content: center;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 728px;
     word-wrap: break-word;
 }
 
+.carousel {
+    overflow-x: hidden;
+    display: flex;
+    width: 450px;
+    margin-left: 159px;
+    margin-right: 77px;
+    text-align: center;
+}
 
+.carousel__wrapper {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    right: 0;
+    transition: all .4s linear;
+    
+   
+}
+
+.slider_bottoms.pk1440 {
+    display: none;
+}
+
+.slider_bottoms{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    min-height: 4em;
+    margin-top: 2em;
+}
+
+.slider_bottoms {
+    transition: background-color 0.5s linear;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.slider_bottoms {
+    height: 16px;
+    width: 16px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 5px 10px;
+    
+}
+
+.slider_bottoms:hover {
+    background-color:rgb(237, 243, 243);
+    cursor: pointer;
+}
+
+.slider_bottoms.first {
+    background-color: #BB945F;
+}
+
+.footer_container {
+    width: 768px;
+}
 }    
