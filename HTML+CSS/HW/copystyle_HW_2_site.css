@@ -26,8 +26,16 @@ body {
     margin-right: auto;
     background-color: grey;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
+.container_large {
+    max-width: 1440px; /* Ширина контейнера */
+    width: 100%;
+}
 
 .container_header {
     display: flex;
@@ -37,8 +45,6 @@ body {
     width: 1440px;
     position: relative;    
 }
-
-
 
 h1 {
     font-family: Forum-Regular;
@@ -55,9 +61,7 @@ h1 {
     align-items:center;
     gap: 30px;
     margin-right: 20px;
-
 }
-
 
 .navigation_menu_ul {
     display: flex;
@@ -192,6 +196,7 @@ a {
 .carousel {
     overflow-x: hidden;
     margin-left: 20px;
+    margin-right: 20px;
     margin-top: 20px;
 }
 
@@ -199,7 +204,8 @@ a {
     position: relative;
     display: flex;
     gap: 25px;
-    right: 0;
+    right: 0px;
+    left: 0px;
     transition: all .4s linear;
     
 }
@@ -220,7 +226,7 @@ a {
     
 }
 
-.slider_bottoms_round.pk1440 {
+.bottoms_round.pk1440 {
     height: 16px;
     width: 16px;
     background-color: black;
@@ -230,11 +236,11 @@ a {
 }
 
 .slider_bottoms_sq.pk1440:hover {
-    background-color:rgb(237, 243, 243);
+    background-color:rgb(10, 241, 241);
     cursor: pointer;
 }
 
-.slider_bottoms_round.pk1440.first {
+.bottoms_round.pk1440 {
     background-color: #BB945F;
 }
 
@@ -242,10 +248,12 @@ a {
     display: none;
 }
 
-.box {
+
+.box_book {
     width: 1440px;
     background: white;
     padding-left:20px;
+    padding-top: 20px;
 }
 
 .box_season_h2 {
@@ -257,74 +265,134 @@ a {
     margin:0px;
 }
 
-.spring {
-    display: flex;
-}
-
-.season {
-    width: 1440px;
-
-}
-
 .season_large {
     display: flex;
     width: 1440px;
-    height: 1150px;
     border: none;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
-.season_small {
+.ul_seasons {
+    padding: 0;
+} 
+
+
+.wrapper_season_small {
     width: 590px;
     height: 555px;
     border: 1px solid black;
+    margin: 20px 100px 20px 0px; 
+    
+}
+
+
+.season_small {
+    width: 550px;
+    height: 555px;
+    border: 1px solid rgb(241, 14, 14);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 
 .name_author {
     margin-top: 20px;
     margin-left: 20px;
+    font-family: Forum-Regular, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
 }
 hr {
     border: none;
     text-align: left;
-    border-top: 1px solid #999999;
-    width: 20px;
+    border-top: 0.5px solid #999999;
+    width: 60px;
     margin-left: 0px;
     margin-bottom:20px;
     margin-left: 20px;
+    margin-top: 0px;
 }
 
 .description {
     font-family: Inter-bold, sans-serif;
     letter-spacing: 1px;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     padding-left:20px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
+.description_p1 {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.description_p2 {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+
+
 .text_seasons {
-    margin-top: 50px;
+    margin-top: 0px;
     width: 355px;
-    height: 160px;
     margin-left: 20px;
+    height: 340px;
+   
 }
 
 .text_book {
+    width: 355px;
     font-family: Inter-regular, sans-serif;
     letter-spacing: 2px;
     line-height: 40px;
     font-size: 15px;
-    float:left;
+    text-transform: capitalize;
+    margin: 0px;
+    align-items: start;
+}
+
+.buy {
+    width: 75px;
+    height: 30px;
+    border: 1px solid black;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.buy_p {
+    text-align: center;
+    margin: 0px;
+    font-family: Inter-bold, sans-serif;
+    line-height: auto;
+    text-align: center;
+    font-size: 10px;
+}
+.book {
+    margin-top: 252px;
+    margin-left: 384px;
+    display: flex;
+    position: absolute;
 }
 
 .photo_seasons {
-    margin-top:-102px;
-
+    width: 200px;
+    height: 300px;
+    
 }
+
+
+.hidden {
+    display: none;
+} 
+
 
 .footer_container {
     background-color: black;
@@ -402,8 +470,6 @@ p {
     font-size: 20px;
     line-height: 20px ;
     letter-spacing: 2px;
-   
-    
 }
 
 
@@ -423,188 +489,7 @@ p {
     text-align: center;
 }
 
-
+/* 
 @media screen and (max-width: 768px) {
 
-.container_header {
-    width: 768px;
-}
-    h1 {
-        font-family: Forum-Regular;
-        line-height: 50px;  
-        letter-spacing: 0.6px;
-        font-weight: 400;
-        font-size: 30px;
-        font-style: normal;
-        margin-left: 20px;
-    }
-    
-    .navigation {
-        display: flex;
-        align-items:right;
-        gap: 30px;
-        margin-right: 20px;
-    
-    }
-    
-    
-    .navigation_menu_ul {
-        display: none;
-        
-    }
-    
-    .navigation_menu {
-        font-family: Inter-regular, serif;
-        line-height: 50px;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        margin-right: 0px;
-        
-    }
-    
-    .nav-item {
-        transition: font-weight 0.3s linear;
-        
-    }
-    .nav-item:hover {
-        cursor: pointer;
-        font-weight: 800;
-    } 
-    
-    a {
-        text-decoration: none;
-        color: white;
-    }
-    
-    .icon1_1 {
-        transition: transform 0.5s linear;
-    }
-    .icon1_1:hover {
-        cursor: pointer;
-        transform: scale(1.5);
-    }
-    .burger_bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-
-    }
-
-    .bar {
-        display: inline-block;
-        width: 45px;
-        height: 1px;
-        background-color: white;
-    }
-
-
-    .wellcome {
-        background-image: url(image/Welcome.png) ;
-        background-size: cover;
-        position: relative;
-        background-position: center;
-        width: 768px;
-    }
-    
-    .wellcome_table {
-        position: absolute;
-        top: 37%;
-    }
-    
-    .wellcome_table_text {
-        width: 520px;
-        height: 150px;
-        border: 1px none black;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-    }
-    
-    
-    .wellcome_h2 {
-        font-family: Forum-Regular;
-        color: white;
-        line-height: 50px;  
-        letter-spacing: 3px;
-        font-weight: 400;
-        font-size: 40px;
-        text-transform: uppercase; 
-    }
-
-    .about {
-        width: 768px;
-    }
-    
-.about_info_library {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 728px;
-    word-wrap: break-word;
-}
-
-.carousel {
-    overflow-x: hidden;
-    display: flex;
-    width: 450px;
-    margin-left: 159px;
-    margin-right: 77px;
-    text-align: center;
-}
-
-.carousel__wrapper {
-    position: relative;
-    display: flex;
-    gap: 25px;
-    right: 0;
-    transition: all .4s linear;
-    
-   
-}
-
-.slider_bottoms.pk1440 {
-    display: none;
-}
-
-.slider_bottoms{
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-    min-height: 4em;
-    margin-top: 2em;
-}
-
-.slider_bottoms {
-    transition: background-color 0.5s linear;
-    height: 26px;
-    width: 26px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.slider_bottoms {
-    height: 16px;
-    width: 16px;
-    background-color: black;
-    border-radius: 100%;
-    margin: 5px 10px;
-    
-}
-
-.slider_bottoms:hover {
-    background-color:rgb(237, 243, 243);
-    cursor: pointer;
-}
-
-.slider_bottoms.first {
-    background-color: #BB945F;
-}
-
-.footer_container {
-    width: 768px;
-}
-}    
+} */
