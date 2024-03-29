@@ -29,20 +29,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .container_large {
     max-width: 1440px; /* Ширина контейнера */
     width: 100%;
 }
+ 
+
 
 .container_header {
     display: flex;
     justify-content:space-between;
     background-color: black;
     color: white;
-    width: 1440px;
+    /* width: 1440px; */
     position: relative;    
 }
 
@@ -68,9 +69,14 @@ h1 {
     justify-content: space-between;
     gap: 24px;
     list-style: none;
-    width: auto;
     margin-left: 20px;
-    
+}
+
+#navigation_menu_ul_burger {
+    display: none;
+}
+.burger-icon {
+    display: none;
 }
 
 .navigation_menu {
@@ -104,9 +110,7 @@ a {
     cursor: pointer;
     transform: scale(1.5);
 }
-.burger_bar {
-    display: none;
-}
+
 
 
 
@@ -115,7 +119,7 @@ a {
     background-size: cover;
     position: relative;
     background-position: center;
-    width: 1440px;
+   /*  width: 1440px; */
     height: 600px;
     
 }
@@ -153,7 +157,7 @@ a {
 .about {
     background-color: white;
     color: black;
-    width: 1440px;
+    width: 100%;
     
 }
 
@@ -162,6 +166,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
 }
 .about_info_h2 {
@@ -179,7 +184,7 @@ a {
 .line {
     width: 50px;
     height: 1px;
-    background-color:black;    
+    background-color:rgb(8, 2, 2);    
 }
 
 .about_info_library {
@@ -207,7 +212,6 @@ a {
     right: 0px;
     left: 0px;
     transition: all .4s linear;
-    
 }
 
 .slider_bottoms.pk1440{
@@ -236,12 +240,17 @@ a {
 }
 
 .slider_bottoms_sq.pk1440:hover {
-    background-color:rgb(10, 241, 241);
+    background-color:rgb(24, 64, 104);
     cursor: pointer;
 }
 
 .bottoms_round.pk1440 {
-    background-color: #BB945F;
+    background-color: #120b01;
+}
+
+/* цвет активной кнопки */
+#active {
+    background-color:#BB945F; /* Цвет активной кнопки */
 }
 
 .tel768 {
@@ -250,7 +259,7 @@ a {
 
 
 .box_book {
-    width: 1440px;
+    width: 100%;
     background: white;
     padding-left:20px;
     padding-top: 20px;
@@ -267,7 +276,7 @@ a {
 
 .season_large {
     display: flex;
-    width: 1440px;
+    /* width: 1440px; */
     border: none;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -396,7 +405,7 @@ hr {
 
 .footer_container {
     background-color: black;
-    width: 1440px;
+   /*  width: 1440px; */
     color: white;
     height: 250px;
 }
@@ -443,27 +452,20 @@ p {
     margin-top: 0px;
 }
 
-/* hr {
-    display: block;
-    unicode-bidi: isolate;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
-} */
-
 .line2 {
     justify-content: center;
-    width: 1400px;
+    /* width: 1400px; */
     height: 1px;
     background-color:rgb(247, 246, 246);    
     margin-left: 20px;
+    margin-right: 20px;
     margin-top: -12px;
 } 
 
 .footer_info {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    width: 100%;
     padding-top:48px;
     padding-left: 20px;
     font-family: Inter-regular, sans-serif;
@@ -474,22 +476,151 @@ p {
 
 
 .year {
-   width: 1440px; 
-   text-align: left;
+    display: flex;
+   flex: 1;
 }
 
 .username {
-    padding-right: 20px;
-    width: 1440px; 
+    display: flex;
     text-align: right;
+    justify-content: end;
+    margin-right: 20px;
+    flex: 1;
 }
 
 .team {
-    width: 1440px;  
-    text-align: center;
+    display: flex;
+    margin: 0 auto;
+    flex: 1;
+    justify-content: center;
 }
 
-/* 
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 768px)  {
+
+
+.container_header {
+    display: flex;
+    justify-content:space-between;
+    background-color: black;
+    color: white;
+    position: relative;    
+}
+
+h1 {
+    font-family: Forum-Regular;
+    line-height: 50px;  
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.navigation {
+    display: flex;
+    align-items:center;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+.navigation_menu_ul {
+    display: none;
+}
+
+.navigation_burger  {
+    display: none;
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+}
+
+.burger-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.navigation_menu {
+    font-family: Inter-regular, serif;
+    line-height: 50px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 0px;
+}
+
+.burger-icon div {
+    transition: transform 0.5s linear;
+} 
+
+.burger-icon div{
+    cursor: pointer;
+    transition: scale(1.5);
+} 
+
+/* a {
+    text-decoration: none;
+    color: white;
+}   удалить*/
+
+/* .icon1_1 {
+    transition: transform 0.3s linear;
+}
+.icon1_1:hover {
+    cursor: pointer;
+    transform: scale(1.5);
 } */
+
+.about_for_burger {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.about_info_library {
+    width: 94.91%;
+    padding-left: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+   display: flex;
+   overflow-x: hidden;
+   justify-content: center;
+   gap:20%;
+   
+}
+
+.carousel__wrapper {
+    position: relative;
+    width: 80%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+        
+}
+.photo {
+        width: 450px;
+        height: 560px;
+        display: flex;
+        overflow-x: hidden;
+        margin-top: 20px;
+
+}
+
+.season_large {
+   margin: opx auto;
+    justify-content: right;
+    width: 100%;
+}
+
+}

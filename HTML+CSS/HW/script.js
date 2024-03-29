@@ -131,19 +131,15 @@ const range3Btn = document.getElementById('range3');
 const slides = document.querySelector('.carousel__wrapper');
 const slideWidth = document.querySelector('.photo').clientWidth;
 
-
-
 let currentIndex = 0;
 
 function goToSlide(startIndex, endIndex) {
-    slides.style.transform = `translateX(${(-startIndex * slideWidth)-25}px)`; //необходима корректировка на 30px
+    slides.style.transform = `translateX(${(-startIndex * slideWidth)-26}px)`; //необходима корректировка на 25px
     currentIndex = startIndex;
 }
 
 range1Btn.addEventListener('click', function() {
     goToSlide(0, 2);
-    
-    
 });
 
 range2Btn.addEventListener('click', function() {
@@ -153,6 +149,25 @@ range2Btn.addEventListener('click', function() {
 range3Btn.addEventListener('click', function() {
     goToSlide(2, 4);
 });
+
+/* function changeColor() {
+    let block = document.getElementById('button');
+    block.style.backgroundColor = 'lightgreen';
+} */
+
+
+
+
+
+//создаем бургер меню
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+
+    const burgerIcon = document.querySelector('.burger-icon');
+    burgerIcon.classList.toggle('active');
+}
 
 
 
