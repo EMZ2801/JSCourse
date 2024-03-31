@@ -12,8 +12,9 @@ function App() {
     <>
     {/* отображение на странице - все, что хотим отобразить в принципе */}
     <Routes>
-     <Route path='Registr' element={< Registr/>}/>    {/* порядок открытия страниц */}
-     <Route path='/' element={ <Home />}/>   
+    <Route path='Home' element={ <Home/>}/>   
+     <Route path='/' element={< Registr/>}/>    {/* порядок открытия страниц */}
+     
 </Routes>
     
     </>
