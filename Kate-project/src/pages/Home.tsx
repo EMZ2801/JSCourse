@@ -1,19 +1,28 @@
-import { FC } from "react";
+import {FC, useCallback} from "react";
+import {useAppDispatch, useAppSelector} from "../../store/store";
+import {changeTheme, Theme} from "../store/system/systemSlice";
+import {useThemeColors} from "../hooks/theme/useThemeColors";
 
 export const Home: FC = () => {
-  return (
-    <div className="container2">
-      <div className="search"> search </div>
-      <div className="wrapper2">
-        <div className="forecast5days  mini"> </div>
+    const {theme, lang} =useAppSelector(state=>state.system)
+    const dispatch = useAppDispatch();
+    const colors = useThemeColors();
 
-        <div className="forecast16days mini"> </div>
-
-        <div className="city mini"> </div>
-
-        <div className="curent_weather mini"> </div>
-      </div>
-    </div>
-  );
-};
-/* 02.04.24 */
+    const setTheme = useCallback((type: Theme)=>{
+        dispatch(changeTheme(type));
+    }, [])
+    return(
+        <>
+            {theme}
+           <div>
+             <div onClick={setTheme.bind(this, "dark")}>
+                 темная
+             </div>
+               <div onClick={setTheme.bind(this, "light")}>
+                   светлая
+               </div>
+               <div style={{height: 40, width: 40, background: colors.main }}></div>
+           </div>
+        </>
+    )
+}
